@@ -26,7 +26,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 safe-top">
+    <header className="fixed inset-x-0 top-0 z-[100] safe-top isolate">
       <div
         className={cn(
           "mx-auto max-w-7xl safe-x transition-all duration-500",
