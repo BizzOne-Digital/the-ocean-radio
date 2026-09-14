@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" role="img" aria-label="The Ocean Radio Relaxing Favorites">
+  <defs>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18B7D9"/>
+      <stop offset="50%" stop-color="#087EA4"/>
+      <stop offset="100%" stop-color="#062B35"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F4FBFC"/>
+      <stop offset="100%" stop-color="#62D9E8"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="72" cy="88" rx="58" ry="38" fill="#063B4A" opacity="0.5"/>
+  <path d="M28 98 C45 78 62 108 88 92 C108 80 118 102 132 94 C148 84 158 100 168 96 L168 118 L20 118 C18 110 22 102 28 98 Z" fill="url(#waveGrad)" opacity="0.85"/>
+  <path d="M48 52 C58 38 72 48 82 42 C92 36 100 50 108 44 C118 36 128 52 138 46 L138 72 C120 78 100 62 82 70 C64 78 52 66 48 72 Z" fill="#087EA4"/>
+  <circle cx="118" cy="58" r="6" fill="#62D9E8"/>
+  <text x="168" y="62" fill="url(#titleGrad)" font-family="system-ui,Segoe UI,sans-serif" font-size="22" font-weight="700">The Ocean</text>
+  <text x="168" y="88" fill="#18B7D9" font-family="system-ui,Segoe UI,sans-serif" font-size="26" font-weight="800" letter-spacing="2">radio</text>
+  <text x="168" y="118" fill="#62D9E8" font-family="system-ui,Segoe UI,sans-serif" font-size="11" font-weight="600" letter-spacing="5">RELAXING FAVORITES</text>
+</svg>
