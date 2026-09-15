@@ -3,7 +3,7 @@ import { Mail, Phone } from "lucide-react";
 import { FacebookIcon } from "@/components/ui/FacebookIcon";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { WaveTransition } from "@/components/motion/WaveTransition";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_ITEMS, SITE } from "@/lib/constants";
 import { OceanBackground } from "@/components/effects/OceanBackground";
 
 export function Footer() {
@@ -20,8 +20,8 @@ export function Footer() {
                 {SITE.tagline}
               </p>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-foam/65">
-                Your soundtrack for relaxing moments — broadcasting a smooth listening
-                experience for audiences near and far.
+                Your soundtrack for relaxing moments — Christian music nightly from 9:00 PM
+                to midnight, plus concerts and community updates online.
               </p>
             </div>
 
@@ -29,17 +29,48 @@ export function Footer() {
               <h2 className="font-display text-sm font-bold uppercase tracking-[0.25em] text-foam">
                 Navigate
               </h2>
-              <ul className="mt-4 space-y-2">
-                {NAV_LINKS.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-foam/75 transition-colors hover:text-aqua focus-visible:outline focus-visible:outline-2 focus-visible:outline-aqua"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+              <ul className="mt-4 space-y-4">
+                {NAV_ITEMS.map((item) => {
+                  if (item.children) {
+                    return (
+                      <li key={item.label}>
+                        <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-aqua/80">
+                          {item.label}
+                        </p>
+                        <ul className="mt-2 space-y-2 pl-0">
+                          <li>
+                            <Link
+                              href="/on-air"
+                              className="text-foam/75 transition-colors hover:text-aqua focus-visible:outline focus-visible:outline-2 focus-visible:outline-aqua"
+                            >
+                              Overview
+                            </Link>
+                          </li>
+                          {item.children.map((link) => (
+                            <li key={link.href}>
+                              <Link
+                                href={link.href}
+                                className="text-foam/75 transition-colors hover:text-aqua focus-visible:outline focus-visible:outline-2 focus-visible:outline-aqua"
+                              >
+                                {link.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    );
+                  }
+                  return (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="text-foam/75 transition-colors hover:text-aqua focus-visible:outline focus-visible:outline-2 focus-visible:outline-aqua"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -83,10 +114,7 @@ export function Footer() {
 
           <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-aqua/10 pt-8 text-center text-xs text-foam/50 md:flex-row md:text-left">
             <p>© 2026 {SITE.name}. All rights reserved.</p>
-            <a
-              href={SITE.url}
-              className="transition-colors hover:text-aqua"
-            >
+            <a href={SITE.url} className="transition-colors hover:text-aqua">
               theoceanradio.com
             </a>
           </div>

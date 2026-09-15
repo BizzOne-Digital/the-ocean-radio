@@ -24,7 +24,7 @@ export function BrandLogo({ className, priority, href = "/", onClick }: BrandLog
       priority={priority}
       loading={priority ? "eager" : "lazy"}
       className={cn(
-        "h-auto w-[min(200px,48vw)] max-w-full object-contain object-left",
+        "h-auto max-h-11 w-auto max-w-full object-contain object-left",
         className,
       )}
     />

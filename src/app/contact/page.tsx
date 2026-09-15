@@ -3,7 +3,7 @@ import { ContactPageContent } from "@/components/pages/contact/ContactPageConten
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Us",
   description: "Get in touch with The Ocean Radio — email, phone, and Facebook.",
   alternates: { canonical: `${SITE.url}/contact` },
 };

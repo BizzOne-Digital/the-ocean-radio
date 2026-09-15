@@ -5,7 +5,7 @@ import { CTASection } from "@/components/sections/CTASection";
 import { GlobalAudienceSection } from "@/components/sections/GlobalAudienceSection";
 import { HomeStationIntro } from "@/components/sections/HomeStationIntro";
 import { LiveRadioSection } from "@/components/sections/LiveRadioSection";
-import { ServicesPreview } from "@/components/sections/ServicesPreview";
+import { OnAirHomeSection } from "@/components/sections/OnAirHomeSection";
 import { SoundscapeSection } from "@/components/sections/SoundscapeSection";
 import { WhyListenSection } from "@/components/sections/WhyListenSection";
 
@@ -23,7 +23,7 @@ export function HomePageContent() {
       <WaveTransition variant="foam" />
 
       <WhyListenSection />
-      <ServicesPreview />
+      <OnAirHomeSection />
       <SoundscapeSection />
 
       <GlobalAudienceSection />
@@ -34,8 +34,8 @@ export function HomePageContent() {
         description="Press play and let relaxing favorites carry you through the day — or reach out to connect with The Ocean Radio team."
         primaryHref="/#listen-live"
         primaryLabel="Listen Live"
-        secondaryHref="/contact"
-        secondaryLabel="Get In Touch"
+        secondaryHref="/on-air/schedule"
+        secondaryLabel="On Air Schedule"
       />
     </>
   );

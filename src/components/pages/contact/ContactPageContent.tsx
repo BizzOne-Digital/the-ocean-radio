@@ -10,7 +10,7 @@ export function ContactPageContent() {
   return (
     <>
       <PageHero
-        eyebrow="Contact"
+        eyebrow="Contact Us"
         title="Let's Connect"
         description="Reach out for listening questions, partnerships, or online advertising on The Ocean Radio. We're happy to hear from you."
         backgroundImage={SITE_IMAGES.contactConnect}
@@ -29,8 +29,8 @@ export function ContactPageContent() {
         description="Head back to the homepage player and enjoy relaxing favorites while you wait for a reply."
         primaryHref="/#listen-live"
         primaryLabel="Open Live Player"
-        secondaryHref="/services"
-        secondaryLabel="View Services"
+        secondaryHref="/concerts-events"
+        secondaryLabel="Concerts & Events"
         backgroundImage={SITE_IMAGES.underwaterRays}
       />
     </>

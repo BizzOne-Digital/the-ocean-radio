@@ -8,12 +8,16 @@ import { useCallback, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { BrandLogo } from "@/components/ui/BrandLogo";
 import { FacebookIcon } from "@/components/ui/FacebookIcon";
-import { NAV_LINKS, SITE } from "@/lib/constants";
+import { NAV_ITEMS, SITE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 type MobileMenuProps = {
   streamReady?: boolean;
 };
+
+function isLinkActive(pathname: string, href: string) {
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export function MobileMenu({ streamReady }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
@@ -47,13 +51,15 @@ export function MobileMenu({ streamReady }: MobileMenuProps) {
   const close = useCallback(() => setOpen(false), []);
   const toggle = useCallback(() => setOpen((o) => !o), []);
 
+  let motionIndex = 0;
+
   const panel = (
     <AnimatePresence>
       {open && (
         <>
           <motion.button
             type="button"
-            className="fixed inset-0 z-[200] cursor-default bg-dark-ocean/90 backdrop-blur-md lg:hidden"
+            className="fixed inset-0 z-[200] cursor-default bg-dark-ocean/90 backdrop-blur-md md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -62,7 +68,7 @@ export function MobileMenu({ streamReady }: MobileMenuProps) {
           />
           <motion.nav
             id="mobile-nav"
-            className="fixed inset-y-0 right-0 z-[210] flex w-full max-w-[340px] flex-col overflow-y-auto overflow-x-hidden border-l border-aqua/15 bg-deep-ocean shadow-2xl lg:hidden"
+            className="fixed inset-y-0 right-0 z-[210] flex w-full max-w-[340px] flex-col overflow-y-auto overflow-x-hidden border-l border-aqua/15 bg-deep-ocean shadow-2xl md:hidden"
             style={{
               paddingTop: "max(1rem, env(safe-area-inset-top))",
               paddingBottom: "max(1rem, env(safe-area-inset-bottom))",
@@ -95,30 +101,86 @@ export function MobileMenu({ streamReady }: MobileMenuProps) {
               </div>
 
               <ul className="flex flex-col gap-1">
-                {NAV_LINKS.map((link, i) => (
-                  <motion.li
-                    key={link.href}
-                    initial={{ opacity: 0, x: 28 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.04 + i * 0.06 }}
-                  >
-                    <Link
-                      href={link.href}
-                      className={cn(
-                        "flex min-h-12 items-center justify-between rounded-xl px-4 py-3 text-base font-semibold uppercase tracking-[0.15em] transition-colors touch-manipulation sm:tracking-[0.2em]",
-                        pathname === link.href
-                          ? "bg-aqua/10 text-aqua"
-                          : "text-foam active:bg-foam/10",
-                      )}
-                      onClick={close}
+                {NAV_ITEMS.map((item) => {
+                  if (item.children) {
+                    const groupActive = item.children.some((c) =>
+                      isLinkActive(pathname, c.href),
+                    );
+                    return (
+                      <li key={item.label} className="mb-2">
+                        <Link
+                          href="/on-air"
+                          onClick={close}
+                          className={cn(
+                            "block px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] touch-manipulation",
+                            groupActive || pathname === "/on-air"
+                              ? "text-aqua"
+                              : "text-foam/55 hover:text-foam/80",
+                          )}
+                        >
+                          {item.label}
+                        </Link>
+                        <ul className="flex flex-col gap-0.5">
+                          {item.children.map((link) => {
+                            const active = isLinkActive(pathname, link.href);
+                            const delay = 0.04 + motionIndex++ * 0.06;
+                            return (
+                              <motion.li
+                                key={link.href}
+                                initial={{ opacity: 0, x: 28 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay }}
+                              >
+                                <Link
+                                  href={link.href}
+                                  className={cn(
+                                    "flex min-h-11 items-center justify-between rounded-xl py-2.5 pl-6 pr-4 text-[15px] font-semibold tracking-wide transition-colors touch-manipulation",
+                                    active
+                                      ? "bg-aqua/10 text-aqua"
+                                      : "text-foam active:bg-foam/10",
+                                  )}
+                                  onClick={close}
+                                >
+                                  {link.label}
+                                  {active && (
+                                    <Radio className="h-4 w-4 opacity-70" aria-hidden />
+                                  )}
+                                </Link>
+                              </motion.li>
+                            );
+                          })}
+                        </ul>
+                      </li>
+                    );
+                  }
+
+                  const active = isLinkActive(pathname, item.href);
+                  const delay = 0.04 + motionIndex++ * 0.06;
+                  return (
+                    <motion.li
+                      key={item.href}
+                      initial={{ opacity: 0, x: 28 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay }}
                     >
-                      {link.label}
-                      {pathname === link.href && (
-                        <Radio className="h-4 w-4 opacity-70" aria-hidden />
-                      )}
-                    </Link>
-                  </motion.li>
-                ))}
+                      <Link
+                        href={item.href}
+                        className={cn(
+                          "flex min-h-12 items-center justify-between rounded-xl px-4 py-3 text-base font-semibold uppercase tracking-[0.12em] transition-colors touch-manipulation sm:tracking-[0.15em]",
+                          active
+                            ? "bg-aqua/10 text-aqua"
+                            : "text-foam active:bg-foam/10",
+                        )}
+                        onClick={close}
+                      >
+                        {item.label}
+                        {active && (
+                          <Radio className="h-4 w-4 opacity-70" aria-hidden />
+                        )}
+                      </Link>
+                    </motion.li>
+                  );
+                })}
               </ul>
 
               <motion.div
@@ -157,7 +219,7 @@ export function MobileMenu({ streamReady }: MobileMenuProps) {
   );
 
   return (
-    <div className="relative z-[60] lg:hidden">
+    <div className="relative z-[60] md:hidden">
       <button
         type="button"
         className={cn(

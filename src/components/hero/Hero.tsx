@@ -95,12 +95,12 @@ export function Hero() {
               Listen Live
             </Link>
             <Button
-              href="/services"
+              href="/on-air/schedule"
               variant="secondary"
               showArrow
               className="min-h-12 w-full border-foam/25 bg-foam/5 uppercase tracking-[0.14em] backdrop-blur-sm sm:w-auto sm:tracking-[0.18em]"
             >
-              Explore The Station
+              On Air Schedule
             </Button>
           </motion.div>
 

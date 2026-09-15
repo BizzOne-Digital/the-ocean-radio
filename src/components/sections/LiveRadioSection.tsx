@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { DirectionalReveal } from "@/components/motion/DirectionalReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionImage } from "@/components/ui/SectionImage";
 import { LiveRadioPlayer } from "@/components/radio/LiveRadioPlayer";
+import { ON_AIR_SHOW } from "@/lib/constants";
 import { SITE_IMAGES } from "@/lib/images";
 
 export function LiveRadioSection() {
@@ -25,12 +27,27 @@ export function LiveRadioSection() {
           <SectionHeading
             eyebrow="On Air"
             title="Listen Live"
-            description="Relax, tune in, and let The Ocean Radio become the soundtrack to your day."
+            description={`Relax and tune in. Nightly ${ON_AIR_SHOW.title}, ${ON_AIR_SHOW.timeLabel}.`}
             align="center"
           />
         </DirectionalReveal>
         <DirectionalReveal direction="scale" delay={0.15} className="mx-auto mt-12 max-w-2xl">
           <LiveRadioPlayer />
+        </DirectionalReveal>
+        <DirectionalReveal direction="bottom" delay={0.2} className="mt-8 flex flex-wrap items-center justify-center gap-4 text-center">
+          <Link
+            href="/on-air/recently-played"
+            className="text-xs font-bold uppercase tracking-[0.16em] text-aqua hover:text-bright-water"
+          >
+            Recently Played
+          </Link>
+          <span className="text-foam/25" aria-hidden>|</span>
+          <Link
+            href="/on-air/schedule"
+            className="text-xs font-bold uppercase tracking-[0.16em] text-aqua hover:text-bright-water"
+          >
+            On Air Schedule
+          </Link>
         </DirectionalReveal>
       </div>
     </section>
