@@ -3,6 +3,7 @@ import { ParallaxLayer } from "@/components/motion/ParallaxLayer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionImage } from "@/components/ui/SectionImage";
 import { ON_AIR_SHOW } from "@/lib/constants";
+import { DAYTIME_SHOW } from "@/lib/playlists";
 import { SITE_IMAGES } from "@/lib/images";
 import { OnAirShowCard } from "./OnAirShowCard";
 
@@ -83,7 +84,7 @@ export function ScheduleTableSection() {
             Schedule at a glance
           </h2>
           <p className="mt-2 text-sm text-foam/60">
-            One row — the same Christian music show applies Monday through Sunday.
+            All times Philippine Time (Asia/Manila), Monday through Sunday.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-aqua/15">
@@ -92,16 +93,25 @@ export function ScheduleTableSection() {
                 <tr className="border-b border-aqua/15 bg-aqua/5 text-[10px] font-bold uppercase tracking-[0.2em] text-aqua">
                   <th className="px-5 py-3 md:px-6" scope="col">Program</th>
                   <th className="px-5 py-3 md:px-6" scope="col">Time</th>
-                  <th className="px-5 py-3 md:px-6" scope="col">Days</th>
+                  <th className="px-5 py-3 md:px-6" scope="col">Playlist</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-dark-ocean/60">
+                <tr className="border-b border-aqua/10 bg-dark-ocean/60">
+                  <td className="px-5 py-4 font-semibold text-foam md:px-6">
+                    {DAYTIME_SHOW.title}
+                  </td>
+                  <td className="px-5 py-4 text-foam/85 md:px-6">{DAYTIME_SHOW.timeLabel}</td>
+                  <td className="px-5 py-4 text-foam/85 md:px-6">
+                    {DAYTIME_SHOW.trackCount} songs (no repeats)
+                  </td>
+                </tr>
+                <tr className="bg-dark-ocean/40">
                   <td className="px-5 py-4 font-semibold text-foam md:px-6">
                     {ON_AIR_SHOW.title}
                   </td>
                   <td className="px-5 py-4 text-foam/85 md:px-6">{ON_AIR_SHOW.timeLabel}</td>
-                  <td className="px-5 py-4 text-foam/85 md:px-6">{ON_AIR_SHOW.daysLabel}</td>
+                  <td className="px-5 py-4 text-foam/85 md:px-6">Spotify playlist</td>
                 </tr>
               </tbody>
             </table>

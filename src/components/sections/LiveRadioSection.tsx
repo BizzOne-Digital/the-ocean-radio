@@ -2,7 +2,7 @@ import Link from "next/link";
 import { DirectionalReveal } from "@/components/motion/DirectionalReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SectionImage } from "@/components/ui/SectionImage";
-import { LiveRadioPlayer } from "@/components/radio/LiveRadioPlayer";
+import { OceanRadioPlayer } from "@/components/radio/OceanRadioPlayer";
 import { ON_AIR_SHOW } from "@/lib/constants";
 import { SITE_IMAGES } from "@/lib/images";
 
@@ -32,7 +32,7 @@ export function LiveRadioSection() {
           />
         </DirectionalReveal>
         <DirectionalReveal direction="scale" delay={0.15} className="mx-auto mt-12 max-w-2xl">
-          <LiveRadioPlayer />
+          <OceanRadioPlayer />
         </DirectionalReveal>
         <DirectionalReveal direction="bottom" delay={0.2} className="mt-8 flex flex-wrap items-center justify-center gap-4 text-center">
           <Link

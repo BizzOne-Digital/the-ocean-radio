@@ -1,0 +1,452 @@
+{
+  "slot": "relaxing-favorites",
+  "timezone": "Asia/Manila",
+  "hours": "00:00-21:00",
+  "tracks": [
+    {
+      "id": "rf-1",
+      "artist": "MICHAEL JACKSON",
+      "title": "WANNA BE STARTING SOMETHING"
+    },
+    {
+      "id": "rf-2",
+      "artist": "LONDONBEAT",
+      "title": "I'VE BEEN THINKING ABOUT YOU"
+    },
+    {
+      "id": "rf-3",
+      "artist": "AMANDA MARSHALL",
+      "title": "EVERYBODY'S GOT A STORY"
+    },
+    {
+      "id": "rf-4",
+      "artist": "WHITNEY HOUSTON",
+      "title": "I WANNA DANCE WITH SOMEBODY"
+    },
+    {
+      "id": "rf-5",
+      "artist": "HOOTIE & THE BLOWFISH",
+      "title": "RAISE YOUR GLASS"
+    },
+    {
+      "id": "rf-6",
+      "artist": "BARENAKED LADIES",
+      "title": "ENID"
+    },
+    {
+      "id": "rf-7",
+      "artist": "THE CALLING",
+      "title": "WHEREVER YOU WILL GO"
+    },
+    {
+      "id": "rf-8",
+      "artist": "K'NAAN",
+      "title": "WAVIN' FLAG"
+    },
+    {
+      "id": "rf-9",
+      "artist": "STARSHIP",
+      "title": "NOTHING'S GONNA STOP US NOW"
+    },
+    {
+      "id": "rf-10",
+      "artist": "LUBA",
+      "title": "LET IT GO"
+    },
+    {
+      "id": "rf-11",
+      "artist": "MADONNA",
+      "title": "VOGUE"
+    },
+    {
+      "id": "rf-12",
+      "artist": "SHANIA TWAIN",
+      "title": "FOREVER AND FOR ALWAYS"
+    },
+    {
+      "id": "rf-13",
+      "artist": "JOURNEY",
+      "title": "DON'T STOP BELIEVIN'"
+    },
+    {
+      "id": "rf-14",
+      "artist": "BRUNO MARS",
+      "title": "UPTOWN FUNK"
+    },
+    {
+      "id": "rf-15",
+      "artist": "GOO GOO DOLLS",
+      "title": "IRIS"
+    },
+    {
+      "id": "rf-16",
+      "artist": "SEAN MENDES",
+      "title": "TREAT YOU BETTER"
+    },
+    {
+      "id": "rf-17",
+      "artist": "RICK SPRINGFIELD",
+      "title": "JESSIE'S GIRL"
+    },
+    {
+      "id": "rf-18",
+      "artist": "SERENA RYDER",
+      "title": "STOMPA"
+    },
+    {
+      "id": "rf-19",
+      "artist": "UB40",
+      "title": "RED RED WINE"
+    },
+    {
+      "id": "rf-20",
+      "artist": "MAROON 5",
+      "title": "SUGAR"
+    },
+    {
+      "id": "rf-21",
+      "artist": "Parachute Club",
+      "title": "Rise Up"
+    },
+    {
+      "id": "rf-22",
+      "artist": "SPICE GIRLS",
+      "title": "2 BECOME 1"
+    },
+    {
+      "id": "rf-23",
+      "artist": "GLASS TIGER",
+      "title": "DON'T FORGET ME (WHEN I'M GONE)"
+    },
+    {
+      "id": "rf-24",
+      "artist": "BEYONCE",
+      "title": "IRREPLACEABLE"
+    },
+    {
+      "id": "rf-25",
+      "artist": "BACKSTREET BOYS",
+      "title": "AS LONG AS YOU LOVE ME"
+    },
+    {
+      "id": "rf-26",
+      "artist": "MADONNA",
+      "title": "INTO THE GROOVE"
+    },
+    {
+      "id": "rf-27",
+      "artist": "MICHAEL BUBLE",
+      "title": "SAVE THE LAST DANCE FOR ME"
+    },
+    {
+      "id": "rf-28",
+      "artist": "MR. BIG",
+      "title": "TO BE WITH YOU"
+    },
+    {
+      "id": "rf-29",
+      "artist": "ALANNAH MYLES",
+      "title": "LOVE IS"
+    },
+    {
+      "id": "rf-30",
+      "artist": "EAGLE EYE CHERRY",
+      "title": "SAVE TONIGHT"
+    },
+    {
+      "id": "rf-31",
+      "artist": "PHIL COLLINS",
+      "title": "YOU CAN'T HURRY LOVE"
+    },
+    {
+      "id": "rf-32",
+      "artist": "MEN WITHOUT HATS",
+      "title": "POP GOES THE WORLD"
+    },
+    {
+      "id": "rf-33",
+      "artist": "DONNA LEWIS",
+      "title": "I LOVE YOU ALWAYS FOREVER"
+    },
+    {
+      "id": "rf-34",
+      "artist": "POLICE",
+      "title": "EVERY LITTLE THING SHE DOES IS MAGIC"
+    },
+    {
+      "id": "rf-35",
+      "artist": "NELLY FURTADO",
+      "title": "POWERLESS"
+    },
+    {
+      "id": "rf-36",
+      "artist": "GEORGE MICHAEL",
+      "title": "FATHER FIGURE"
+    },
+    {
+      "id": "rf-37",
+      "artist": "CHILLIWACK",
+      "title": "MY GIRL (GONE, GONE, GONE)"
+    },
+    {
+      "id": "rf-38",
+      "artist": "ADELE",
+      "title": "ROLLING IN THE DEEP"
+    },
+    {
+      "id": "rf-39",
+      "artist": "GREAT BIG SEA",
+      "title": "ORDINARY DAY"
+    },
+    {
+      "id": "rf-40",
+      "artist": "ONEREPUBLIC",
+      "title": "COUNTING STARS"
+    },
+    {
+      "id": "rf-41",
+      "artist": "THE CARDIGANS",
+      "title": "LOVEFOOL"
+    },
+    {
+      "id": "rf-42",
+      "artist": "JOHN LENNON",
+      "title": "IMAGINE"
+    },
+    {
+      "id": "rf-43",
+      "artist": "BANGLES",
+      "title": "MANIC MONDAY"
+    },
+    {
+      "id": "rf-44",
+      "artist": "FRAY",
+      "title": "HOW TO SAVE A LIFE"
+    },
+    {
+      "id": "rf-45",
+      "artist": "JIMMY CLIFF",
+      "title": "I CAN SEE CLEARLY NOW"
+    },
+    {
+      "id": "rf-46",
+      "artist": "OUTKAST",
+      "title": "HEY YA"
+    },
+    {
+      "id": "rf-47",
+      "artist": "REO SPEEDWAGON",
+      "title": "KEEP ON LOVING YOU"
+    },
+    {
+      "id": "rf-48",
+      "artist": "ELTON JOHN feat. DUA LIPA",
+      "title": "COLD HEART"
+    },
+    {
+      "id": "rf-49",
+      "artist": "SANTANA/ROB THOMAS",
+      "title": "SMOOTH"
+    },
+    {
+      "id": "rf-50",
+      "artist": "MICHAEL JACKSON",
+      "title": "THE WAY YOU MAKE ME FEEL"
+    },
+    {
+      "id": "rf-51",
+      "artist": "SHANIA TWAIN",
+      "title": "ANY MAN OF MINE"
+    },
+    {
+      "id": "rf-52",
+      "artist": "PHIL COLLINS",
+      "title": "ONE MORE NIGHT"
+    },
+    {
+      "id": "rf-53",
+      "artist": "LEONA LEWIS",
+      "title": "BLEEDING LOVE"
+    },
+    {
+      "id": "rf-54",
+      "artist": "TAYLOR SWIFT",
+      "title": "I KNEW YOU WERE TROUBLE"
+    },
+    {
+      "id": "rf-55",
+      "artist": "PINK",
+      "title": "GET THE PARTY STARTED"
+    },
+    {
+      "id": "rf-56",
+      "artist": "WHAM!",
+      "title": "WAKE ME UP BEFORE YOU GO-GO"
+    },
+    {
+      "id": "rf-57",
+      "artist": "ABBA",
+      "title": "DANCING QUEEN"
+    },
+    {
+      "id": "rf-58",
+      "artist": "LORDE",
+      "title": "TEAM"
+    },
+    {
+      "id": "rf-59",
+      "artist": "PRINCE",
+      "title": "KISS"
+    },
+    {
+      "id": "rf-60",
+      "artist": "NO DOUBT",
+      "title": "JUST A GIRL"
+    },
+    {
+      "id": "rf-61",
+      "artist": "KOOL AND THE GANG",
+      "title": "CELEBRATION"
+    },
+    {
+      "id": "rf-62",
+      "artist": "MICHAEL BUBLE'",
+      "title": "HAVEN'T MET YOU YET"
+    },
+    {
+      "id": "rf-63",
+      "artist": "TRAIN",
+      "title": "DROPS OF JUPITER (TELL ME)"
+    },
+    {
+      "id": "rf-64",
+      "artist": "ROXETTE",
+      "title": "JOYRIDE"
+    },
+    {
+      "id": "rf-65",
+      "artist": "MAROON 5",
+      "title": "MEMORIES"
+    },
+    {
+      "id": "rf-66",
+      "artist": "FLEETWOOD MAC",
+      "title": "DREAMS"
+    },
+    {
+      "id": "rf-67",
+      "artist": "STEVE WINWOOD",
+      "title": "HIGHER LOVE"
+    },
+    {
+      "id": "rf-68",
+      "artist": "CRANBERRIES",
+      "title": "LINGER"
+    },
+    {
+      "id": "rf-69",
+      "artist": "KATY PERRY",
+      "title": "FIREWORK"
+    },
+    {
+      "id": "rf-70",
+      "artist": "HUEY LEWIS AND THE NEWS",
+      "title": "IF THIS IS IT"
+    },
+    {
+      "id": "rf-71",
+      "artist": "SNOW PATROL",
+      "title": "CHASING CARS"
+    },
+    {
+      "id": "rf-72",
+      "artist": "TIFFANY",
+      "title": "I THINK WE'RE ALONE NOW"
+    },
+    {
+      "id": "rf-73",
+      "artist": "SAVAGE GARDEN",
+      "title": "I WANT YOU"
+    },
+    {
+      "id": "rf-74",
+      "artist": "GREAT BIG SEA",
+      "title": "WHEN I'M UP"
+    },
+    {
+      "id": "rf-75",
+      "artist": "BACKSTREET BOYS",
+      "title": "QUIT PLAYING GAMES"
+    },
+    {
+      "id": "rf-76",
+      "artist": "ERIC CARMEN",
+      "title": "HUNGRY EYES"
+    },
+    {
+      "id": "rf-77",
+      "artist": "GOTYE",
+      "title": "SOMEBODY THAT I USED TO KNOW"
+    },
+    {
+      "id": "rf-78",
+      "artist": "CYNDI LAUPER",
+      "title": "GIRLS JUST WANT TO HAVE FUN"
+    },
+    {
+      "id": "rf-79",
+      "artist": "NATASHA BEDINGFIELD",
+      "title": "UNWRITTEN"
+    },
+    {
+      "id": "rf-80",
+      "artist": "FLEETWOOD MAC",
+      "title": "LANDSLIDE (LIVE 1997)"
+    },
+    {
+      "id": "rf-81",
+      "artist": "ONE DIRECTION",
+      "title": "WHAT MAKES YOU BEAUTIFUL"
+    },
+    {
+      "id": "rf-82",
+      "artist": "BRUCE HORNSBY & THE RANGE",
+      "title": "THE WAY IT IS"
+    },
+    {
+      "id": "rf-83",
+      "artist": "ABBA",
+      "title": "TAKE A CHANCE ON ME"
+    },
+    {
+      "id": "rf-84",
+      "artist": "EDDIE MONEY",
+      "title": "TAKE ME HOME TONIGHT"
+    },
+    {
+      "id": "rf-85",
+      "artist": "SEAL",
+      "title": "KISS FROM A ROSE"
+    },
+    {
+      "id": "rf-86",
+      "artist": "BEACH BOYS",
+      "title": "KOKOMO"
+    },
+    {
+      "id": "rf-87",
+      "artist": "AVICII",
+      "title": "WAKE ME UP"
+    },
+    {
+      "id": "rf-88",
+      "artist": "BLONDIE",
+      "title": "HEART OF GLASS"
+    },
+    {
+      "id": "rf-89",
+      "artist": "PINK",
+      "title": "JUST LIKE A PILL"
+    }
+  ]
+}

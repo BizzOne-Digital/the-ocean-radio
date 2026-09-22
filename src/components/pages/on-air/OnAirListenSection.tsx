@@ -1,5 +1,5 @@
 import { DirectionalReveal } from "@/components/motion/DirectionalReveal";
-import { LiveRadioPlayer } from "@/components/radio/LiveRadioPlayer";
+import { OceanRadioPlayer } from "@/components/radio/OceanRadioPlayer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { OceanBackground } from "@/components/effects/OceanBackground";
 
@@ -29,7 +29,7 @@ export function OnAirListenSection({ id = "listen-live" }: OnAirListenSectionPro
           </p>
         </DirectionalReveal>
         <DirectionalReveal direction="bottom" delay={0.08} className="mt-12">
-          <LiveRadioPlayer />
+          <OceanRadioPlayer />
         </DirectionalReveal>
       </div>
     </section>

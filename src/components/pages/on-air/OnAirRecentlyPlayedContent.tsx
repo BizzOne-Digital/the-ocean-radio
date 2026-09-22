@@ -2,7 +2,6 @@ import { PageHero } from "@/components/layout/PageHero";
 import { WaveTransition } from "@/components/motion/WaveTransition";
 import { CTASection } from "@/components/sections/CTASection";
 import { SITE_IMAGES } from "@/lib/images";
-import { OnAirListenSection } from "./OnAirListenSection";
 import { OnAirNowStrip } from "./OnAirNowStrip";
 import { OnAirSubNav } from "./OnAirSubNav";
 import {
@@ -26,9 +25,6 @@ export function OnAirRecentlyPlayedContent() {
 
       <RecentlyPlayedIntroSection />
       <RecentlyPlayedListSection />
-      <WaveTransition variant="mid" />
-
-      <OnAirListenSection />
       <WaveTransition variant="foam" flip />
 
       <CTASection

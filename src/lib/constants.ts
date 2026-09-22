@@ -25,7 +25,7 @@ export const ON_AIR_SHOW = {
   summary:
     "The Ocean Radio airs one dedicated show each evening — the same Christian music format from 9:00 PM to 12:00 AM.",
   detail:
-    "There is no rotating daytime lineup on this schedule: one program, one time block, every day. Outside those hours, relaxing favorites may still stream when the station is live online.",
+    "Evening Christian Music on Spotify from 9:00 PM to midnight. Daytime (12:00 AM – 9:00 PM) uses the relaxing favorites playlist shared by the station.",
 } as const;
 
 export type NavChildLink = {

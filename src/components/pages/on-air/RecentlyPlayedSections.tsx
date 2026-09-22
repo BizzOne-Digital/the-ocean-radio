@@ -1,8 +1,12 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { ListMusic } from "lucide-react";
 import { DirectionalReveal } from "@/components/motion/DirectionalReveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { RADIO_STREAM_URL, ON_AIR_SHOW } from "@/lib/constants";
+import { DAYTIME_SHOW } from "@/lib/playlists";
+import { ON_AIR_SHOW } from "@/lib/constants";
+import { PlaylistTrackList } from "./PlaylistTrackList";
+import { RecentlyPlayedPlayer } from "./RecentlyPlayedPlayer";
 
 export function RecentlyPlayedIntroSection() {
   return (
@@ -15,8 +19,8 @@ export function RecentlyPlayedIntroSection() {
           <SectionHeading
             id="recently-played-intro"
             eyebrow="Track log"
-            title="What Was On The Air"
-            description="Recently Played is your look-back at songs that aired on The Ocean Radio. During our nightly Christian music show (9:00 PM – 12:00 AM), this list will reflect what listeners just heard — once the live stream provides track information."
+            title="Playlist & Recently Played"
+            description={`Browse the station lineup — ${DAYTIME_SHOW.trackCount} unique relaxing favorites (12:00 AM – 9:00 PM Philippine Time), plus ${ON_AIR_SHOW.title} evenings (9:00 PM – midnight). Tap play to hear any song on Spotify.`}
             align="center"
           />
         </DirectionalReveal>
@@ -26,8 +30,6 @@ export function RecentlyPlayedIntroSection() {
 }
 
 export function RecentlyPlayedListSection() {
-  const streamReady = Boolean(RADIO_STREAM_URL);
-
   return (
     <section
       className="relative border-t border-aqua/10 bg-dark-ocean/40 py-16 md:py-20"
@@ -35,53 +37,23 @@ export function RecentlyPlayedListSection() {
     >
       <div className="mx-auto max-w-4xl px-4 safe-x md:px-8">
         <DirectionalReveal direction="left">
-          <div className="overflow-hidden rounded-2xl border border-aqua/15 bg-deep-ocean/80 shadow-card">
-            <div className="flex items-center gap-3 border-b border-aqua/10 px-5 py-4 md:px-6">
+          <div id="recently-played-list">
+            <div className="mb-4 flex items-center gap-3">
               <ListMusic className="h-5 w-5 text-aqua" aria-hidden />
-              <h2
-                id="recently-played-list"
-                className="font-display text-lg font-bold text-foam md:text-xl"
-              >
-                Recently played tracks
+              <h2 className="font-display text-lg font-bold text-foam md:text-xl">
+                Station playlist
               </h2>
             </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[320px] text-left text-sm">
-                <thead>
-                  <tr className="border-b border-aqua/10 text-[10px] font-bold uppercase tracking-[0.2em] text-aqua/80">
-                    <th className="px-5 py-3 md:px-6" scope="col">Title</th>
-                    <th className="px-5 py-3 md:px-6" scope="col">Artist</th>
-                    <th className="hidden px-5 py-3 sm:table-cell md:px-6" scope="col">
-                      Played
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td colSpan={3} className="px-5 py-12 text-center md:px-6">
-                      <p className="text-base font-medium text-foam/80">
-                        No tracks to display yet
-                      </p>
-                      <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-foam/55">
-                        {streamReady
-                          ? "Track metadata is not connected yet. Listen live during Christian Music (9:00 PM – 12:00 AM) and check back here once history is enabled."
-                          : "The live stream is not configured yet. When The Ocean Radio is on the air, recently played songs will appear in this table."}
-                      </p>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <PlaylistTrackList />
           </div>
         </DirectionalReveal>
 
         <DirectionalReveal direction="right" delay={0.06} className="mt-10">
           <div className="flex flex-col items-center justify-between gap-4 rounded-xl border border-aqua/10 bg-dark-ocean/50 px-5 py-5 text-center sm:flex-row sm:text-left md:px-6">
             <p className="text-sm text-foam/70">
-              <span className="font-semibold text-foam">{ON_AIR_SHOW.title}</span>
+              <span className="font-semibold text-foam">{DAYTIME_SHOW.title}</span>
               {" · "}
-              {ON_AIR_SHOW.timeLabel}
+              {DAYTIME_SHOW.timeLabel} PH
             </p>
             <Link
               href="/on-air/schedule"
@@ -91,6 +63,12 @@ export function RecentlyPlayedListSection() {
             </Link>
           </div>
         </DirectionalReveal>
+
+        <div className="mt-12" id="listen-live">
+          <Suspense fallback={<p className="text-center text-sm text-foam/60">Loading player…</p>}>
+            <RecentlyPlayedPlayer />
+          </Suspense>
+        </div>
       </div>
     </section>
   );
